@@ -22,7 +22,7 @@ import {
 import { router } from "expo-router";
 import { signUpSchema, SignUpSchema } from "./auth.schema";
 
-const USER_STORAGE_KEY = "user";
+export const USER_STORAGE_KEY = "user";
 const USER_AUTH_STORAGE_KEY = "user_auth";
 
 export default function SignUpForm() {
