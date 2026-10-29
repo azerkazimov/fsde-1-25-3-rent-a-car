@@ -30,7 +30,6 @@ export default function Profile() {
 
 
   return (
-
     <SafeAreaView style={styles.container} edges={["left", "right"]}>
       <Header title="Profile" />
       <View style={styles.buttonContainer}>
@@ -43,7 +42,7 @@ export default function Profile() {
           <Text style={styles.buttonText}>Driver License</Text>
         </Button>
 
-        <Button onPress={handleEditProfile}>
+        <Button onPress={clearStorage}>
           <Text style={styles.buttonText}>Sign Out</Text>
         </Button>
       </View>

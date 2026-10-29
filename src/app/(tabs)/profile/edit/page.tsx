@@ -7,8 +7,38 @@ import { View, Text, StyleSheet, Image, Pressable, Alert } from "react-native"
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context"
 import * as ImagePicker from 'expo-image-picker';
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function EditProfile() {
+  //form data
+  const { control, handleSubmit, formState: { errors } } = useForm({
+    defaultValues: {
+      name: '',
+      email: '',
+      phone: '',
+      address: '',
+      avatar: '',
+    }
+  });
+
+// get user data from async storage
+const getUserData = async () =>{
+
+  const userData = await AsyncStorage.getItem('userData');
+  if (userData) {
+    const user = JSON.parse(userData);
+    console.log(user);
+  }
+}
+
+
+  
+
+  const onSubmit = (data: any) => {
+    console.log(data);
+  }
+
   const { colorScheme } = useTheme();
   const styles = getStyles(colorScheme);
   const { top } = useSafeAreaInsets();

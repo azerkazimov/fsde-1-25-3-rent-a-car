@@ -29,6 +29,7 @@ export default function SignUp() {
     const {
         control,
         handleSubmit,
+        trigger,
         reset,
         formState: { errors, isSubmitting },
     } = useForm<SignInSchema>({
@@ -143,7 +144,7 @@ export default function SignUp() {
 
                     <Pressable
                         style={({ pressed }) => [styles.button, styles.primaryButton, pressed && styles.pressed]}
-                        onPress={handleSubmit(onSubmit)}
+                        onPress={() => void handleSubmit(onSubmit)()}
                         disabled={isSubmitting}
                     >
                         {isSubmitting ? (

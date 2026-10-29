@@ -200,7 +200,7 @@ export default function SignUpForm() {
 
                     <Pressable
                         style={({ pressed }) => [styles.button, styles.primaryButton, pressed && styles.pressed]}
-                        onPress={handleSubmit(onSubmit)}
+                        onPress={() => void handleSubmit(onSubmit)()}
                         disabled={isSubmitting}
                     >
                         {isSubmitting ? (
