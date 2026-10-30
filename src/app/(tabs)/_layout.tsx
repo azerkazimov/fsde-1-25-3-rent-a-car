@@ -22,6 +22,14 @@ export default function TabsLayout() {
           <Ionicons name="home" size={24} color={colorScheme === "dark" ? layout.colors.primary : layout.colors.gray} />
         )
       }} />
+      <Tabs.Screen name="location" options={{
+        title: 'Location',
+
+        headerShown: false,
+        tabBarIcon: () => (
+          <Ionicons name="location" size={24} color={colorScheme === "dark" ? layout.colors.primary : layout.colors.gray} />
+        )
+      }} />
 
       <Tabs.Screen name="profile/page" options={{
         title: 'Profile',

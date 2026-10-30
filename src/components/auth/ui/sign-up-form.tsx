@@ -19,8 +19,9 @@ import {
 } from "react-native";
 
 
-import { router } from "expo-router";
+import { Link, router } from "expo-router";
 import { signUpSchema, SignUpSchema } from "./auth.schema";
+import { layout } from "@/constant/layout";
 
 export const USER_STORAGE_KEY = "user";
 const USER_AUTH_STORAGE_KEY = "user_auth";
@@ -212,6 +213,8 @@ export default function SignUpForm() {
 
                     <Text style={styles.divider}>or</Text>
 
+                    <Text style={styles.link}>I already have an account <Link href="/auth/sign-in" style={styles.linkText}>Sign in</Link></Text>
+
                     <Pressable
                         style={({ pressed }) => [styles.button, styles.facebookButton, pressed && styles.pressed]}
                     >
@@ -325,6 +328,17 @@ const styles = StyleSheet.create({
         textAlign: "center",
         color: "#C4C4C4",
         fontSize: 14,
-        marginVertical: 22,
+        marginVertical: 12,
+    },
+    link: {
+        textAlign: "center",
+        color: "#C4C4C4",
+        fontSize: 14,
+        marginBottom: 12,
+    },
+    linkText: {
+        color: layout.colors.primary,
+        fontSize: 14,
+        fontWeight: "500",
     },
 });

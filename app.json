@@ -8,9 +8,11 @@
     "scheme": "carrental",
     "userInterfaceStyle": "automatic",
     "ios": {
+      "bundleIdentifier": "com.yourname.carrental",
       "icon": "./assets/expo.icon"
     },
     "android": {
+      "package": "com.yourname.carrental",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -31,6 +33,19 @@
           "backgroundColor": "#208AEF",
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ],
+      [
+        "react-native-maps",
+        {
+          "iosGoogleMapsApiKey": "AIzaSyB6pT_h2VbI44jJn67vJF_mR130vLg5yGg",
+          "androidGoogleMapsApiKey": "AIzaSyC-NFpEF3UwpcWuo8BYmPjfoVJ7WZRaWKw"
         }
       ]
     ],
