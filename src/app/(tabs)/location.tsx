@@ -16,10 +16,10 @@ export default function LocationScreen() {
 
   useEffect(() => {
     async function getCurrentLocation() {
-      if (Platform.OS === "android" && !Device.isDevice) {
-        setErrorMsg("Oops, this will not work on Snack in an Android emulator. Try it on your device!");
-        return;
-      }
+      // if (Platform.OS === "android" && !Device.isDevice) {
+      //   setErrorMsg("Oops, this will not work on Snack in an Android emulator. Try it on your device!");
+      //   return;
+      // }
 
       let { status } = await Location.requestForegroundPermissionsAsync()
 
